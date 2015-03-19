@@ -1,0 +1,32 @@
+@size: 20vw;
+@padding: 16%;
+@transition-duration: 500ms;
+
+.icon {
+	display: inline-block;
+	float: left; // fix stupid extra spacing between inline-blocks
+	width: @size;
+	height: @size;
+	transition: background-color @transition-duration;
+
+	svg {
+		display: block;
+		margin: auto;
+		padding: @padding;
+		width: 100% - (@padding * 2);
+		height: 100% - (@padding * 2);
+		fill: white;
+	}
+
+	&.round {
+		border-radius: 50%;
+	}
+
+	&:hover {
+		.invert();
+	}
+}
+
+.invert {
+	filter: invert(100%);
+}

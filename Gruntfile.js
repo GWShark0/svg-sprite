@@ -2,6 +2,23 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
+		autoprefixer: {
+			no_dest_multiple: {
+				src: 'styles/*.css'
+			},
+		},
+
+		less: {
+			development: {
+				options: {
+					paths: ["styles"]
+				},
+				files: {
+					"styles/index.css": "styles/index.less"
+				}
+			},
+		},
+
 		svgstore: {
 			options: {
 				inheritviewbox: true,
@@ -29,8 +46,10 @@ module.exports = function(grunt) {
 
 	});
 
-	grunt.loadNpmTasks('grunt-svgstore');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-svgmin');
+	grunt.loadNpmTasks('grunt-svgstore');
 
-	grunt.registerTask('default', ['svgstore', 'svgmin']);
+	grunt.registerTask('default', ['less', 'autoprefixer', 'svgstore', 'svgmin']);
 };
