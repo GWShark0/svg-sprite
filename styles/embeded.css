@@ -27,3 +27,6 @@ body {
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
+.icon-beer svg {
+  fill: green;
+}
