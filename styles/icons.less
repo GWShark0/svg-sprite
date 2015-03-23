@@ -1,10 +1,10 @@
-@size: 20vw;
-@padding: 16%;
+// default
+@size: 100px;
+@padding: 0;
 @transition-duration: 500ms;
 
 .icon {
 	display: inline-block;
-	float: left; // fix stupid extra spacing between inline-blocks
 	width: @size;
 	height: @size;
 	transition: background-color @transition-duration;
@@ -15,15 +15,10 @@
 		padding: @padding;
 		width: 100% - (@padding * 2);
 		height: 100% - (@padding * 2);
-		fill: white;
 	}
 
 	&.round {
 		border-radius: 50%;
-	}
-
-	&:hover {
-		.invert();
 	}
 }
 

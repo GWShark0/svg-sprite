@@ -14,7 +14,8 @@ module.exports = function(grunt) {
 					paths: ["styles"]
 				},
 				files: {
-					"styles/index.css": "styles/index.less"
+					"styles/index.css": "styles/index.less",
+					"styles/embeded.css": "styles/embeded.less"
 				}
 			},
 		},

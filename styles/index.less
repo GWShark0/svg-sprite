@@ -7,3 +7,22 @@ html, body{
 }
 
 @import "icons";
+
+@size: 20vw;
+@padding: 16%;
+
+.icon {
+	float: left; // fix stupid extra spacing between inline-blocks
+
+	svg {
+		fill: white;
+	}
+
+	&:hover {
+		.invert();
+	}
+}
+
+.invert {
+	filter: invert(100%);
+}
