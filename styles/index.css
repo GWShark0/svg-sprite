@@ -10,8 +10,7 @@ body {
   display: inline-block;
   width: 20vw;
   height: 20vw;
-  -webkit-transition: background-color 500ms;
-          transition: background-color 500ms;
+  transition: background-color 500ms;
 }
 .icon svg {
   display: block;
@@ -24,8 +23,7 @@ body {
   border-radius: 50%;
 }
 .invert {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  filter: invert(100%);
 }
 .icon {
   float: left;
@@ -34,10 +32,8 @@ body {
   fill: white;
 }
 .icon:hover {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  filter: invert(100%);
 }
 .invert {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  filter: invert(100%);
 }

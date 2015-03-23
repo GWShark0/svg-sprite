@@ -10,8 +10,7 @@ body {
   display: inline-block;
   width: 100px;
   height: 100px;
-  -webkit-transition: background-color 500ms;
-          transition: background-color 500ms;
+  transition: background-color 500ms;
 }
 .icon svg {
   display: block;
@@ -24,9 +23,14 @@ body {
   border-radius: 50%;
 }
 .invert {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  filter: invert(100%);
 }
-.icon-beer svg {
+svg .camera-body {
   fill: green;
+}
+#camera-flash {
+  fill-opacity: 50%;
+}
+#camera-lens {
+  fill: red;
 }
